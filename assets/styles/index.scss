@@ -2047,9 +2047,12 @@ article.list {
         }
         img {
             max-width: none;
+            max-height: none;
+            height: auto;
             width: 100%;
             @include md {
                 max-width: 160px;
+                max-height: 160px;
                 width: auto;
             }
         }

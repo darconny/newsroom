@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import {get} from 'lodash';
 
 import {gettext, fullDate, wordCount, LIST_ANIMATIONS, getSlugline} from 'utils';
-import {getPicture, getThumbnailRendition, showItemVersions, shortText, isKilled, getVideos} from 'wire/utils';
+import {getPicture, getPreviewRendition, showItemVersions, shortText, isKilled, getVideos} from 'wire/utils';
 
 import ActionButton from 'components/ActionButton';
 
@@ -149,10 +149,10 @@ class WireListItem extends React.Component {
                         )}
                     </div>
 
-                    {isExtended && !isKilled(item) && getThumbnailRendition(picture) && (
+                    {isExtended && !isKilled(item) && getPreviewRendition(picture) && (
                         <div className="wire-articles__item-image">
                             <figure>
-                                <img src={getThumbnailRendition(picture).href} />
+                                <img src={getPreviewRendition(picture).href} />
                             </figure>
                         </div>
                     )}
